@@ -1,0 +1,107 @@
+# Boxes within Boxes - a Puzzle for International Play Day '23
+
+```elixir
+# Oh! Hi there, friend. All the secrets are hidden in the "international_play_day_2023_hidden_box" 
+# dependency. Please don't go snopping around the source of that dependency - it would spoil the fun :)
+
+Mix.install([
+  {:international_play_day_2023_hidden_box,
+   git: "https://github.com/ErikMejerHansen/international_play_day_2023_hidden_box.git"}
+])
+
+{:ok, pid} = BoxesWithinBoxes.start_link()
+
+hint = fn -> BoxesWithinBoxes.hint(pid) end
+unlock = fn arg -> BoxesWithinBoxes.unlock(pid, arg) end
+
+:ok
+```
+
+## Before We Begin
+
+⛔️ **Make sure you’ve run the "Notebook dependencies and setup" block above** ⛔️
+
+(Just hover the cursor above it and click the "Setup" button)
+
+## A Beginning
+
+A wheezed old jester sits cross legged with a large box in his lap. As you and your friends approach a wry smile crosses his wrinkled face.
+
+*“Welcome”* he says with a voice that surprises you with the youthfullness of its timbre.
+
+*“I’m ever so happy to see you. Do sit down.”*
+
+He gestures to the pillows spread on the floor across from him. He starts speaking again as he gestures to the box in his lap: 
+*“I have a gift for you. Meager and predicable as it is – a gift none the less”.*
+
+*“Alas, I cannot just give it to you. Where would the fun be in that?”*
+
+A sense of slight uneasiness settles over you as his eyes twinkle with mirth. Whatever it is you have you gotten yourself into you’re not quite sure what to expect next.
+
+*“My box is locked and requires a key. Within it is another box, requiring yet another key. And so forth until the prize is finally yours. But not to worry, I’m not expecting you to just conjure up a key. At least not without a hint…”*
+
+<!-- livebook:{"break_markdown":true} -->
+
+### 💡 **Instructions:** Your job is to unlock the box.
+
+> Below is an `Elixir` block - you can run code in it to solve the first puzzle. 
+> In it you have access to two functions:
+> 
+> * ` hint` (called like so: `hint.()`) will give you a hint on how to unlock the box.
+> * ` unlock/1` (called like so: `unlock.(...)`) takes one argument. Using the hints you have been given it is your job call it with the argument that you think will unlock the lock. 
+>   You can try as many times as you would like.
+> 
+> If you’re successful the function will return `:unlocked` and you can proceed to the next section.
+> 
+> You not limited to only using code to interpret the hints - you may use whatever means you deem nessesary.
+
+```elixir
+# Get the first hint
+hint.()
+```
+
+## Another Box
+
+You hand the old jester the key you’ve created. He inserts into the lock, turns it and you are rewarded with a satisfying “click”. *“Well done my friends. Let’s see what his box holds. Ah! Another box”*.
+
+The jester extracts a new box from the one just unlocked.
+
+*“Another box – another riddle”*
+
+```elixir
+hint.()
+```
+
+## An Unsurprising Turn of Events
+
+*“Well, this isn’t much of a surprise! It’s another box – I do wonder how long this nesting will go on for.”*
+
+The Jester pulls out new slightly smaller box – this time made of a semi-opaque material not quite hiding its contents but merely obscure it.
+
+```elixir
+hint.()
+```
+
+## With a Little Help
+
+*“Take that lesson to heart! Mere obscurity does not secrets keep”*
+
+The Jester pulls out the next box. It’s looking a bit for worse for wear.
+
+*“Alas! This lock seems jammed. I think you’ll need to call a friend for help, but who to call I wonder? I’ll offer you a hint, though it might not be in the midium you expect…”*
+
+```elixir
+hint.()
+```
+
+## And Finally
+
+*“Well done! I do reckon this is the last of my little boxes and with it one final hint”*
+
+The Jester reaches into his jacket once more and pulls out a slip of paper. On it is written:
+
+`I once Turned down buying a Small Apple. you see i prefer Pears. all the merchant said was Not Good`
+
+```elixir
+hint.()
+```
